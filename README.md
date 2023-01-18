@@ -1,2 +1,2 @@
-# DD
-Denis / Daniel
+# Plantage
+Projekt von Denis und Daniel

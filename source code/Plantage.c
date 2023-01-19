@@ -156,7 +156,7 @@ int main() {
           if(boundaryReached(y, x) == 0){
             if(select == 0){
               y = y - 3;
-              move(y ,x);
+              move(y, x);
               select++;
             } else {
               move(y, x);
@@ -172,7 +172,7 @@ int main() {
           y = y + 2;
           if(boundaryReached(y, x) == 0){
             if(select == 0){
-              move(y ,x);
+              move(y, x);
               select++;
             } else {
               y = y + 3;

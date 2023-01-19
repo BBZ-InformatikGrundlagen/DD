@@ -32,9 +32,9 @@ Die Voraussetzungen, die erfüllt sein müssen, damit das Programm läuft, befin
 * Auf der rechten Seite werden die Daten, die vom MicroBit übertragen werden, angezeigt.
 
 ### Bedienung
-* Mit den Pfeiltasten kann durch die einzelnen Felder navigiert werden.  
-* Mit Enter öffnet sich das Eingabefenster des jeweiligen Feldes.  
-Nach Eingabe der gewünschten Daten kann mit Enter das Eingabefeld wieder geschlossen werden.  
-* Durch Drücken der S-Taste können die eingegebenen Daten gespeichert werden.  
+* Mit den `Pfeiltasten` kann durch die einzelnen Felder navigiert werden.  
+* Mit `Enter` öffnet sich das Eingabefenster des jeweiligen Feldes.  
+Nach Eingabe der gewünschten Daten kann mit `Enter` das Eingabefeld wieder geschlossen werden.  
+* Durch Drücken von `s` können die eingegebenen Daten gespeichert werden.  
 Diese stehen nach dem nächsten Programmstart wieder zur Verfügung.  
-* Mit der Taste Esc wird das Programm beendet.
+* Mit der Taste `Esc` wird das Programm beendet.

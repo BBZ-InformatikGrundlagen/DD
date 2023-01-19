@@ -46,23 +46,23 @@ int main() {
     
     //Werte fuer Deckenlamellen und Licht initialisieren
     int lightIntensity = 0;
-    int lightLimitMax = 816;
-    int lightLimitHigh = 612;
-    int lightLimitLow = 408;
-    int lightLimitMin = 204;
+    int lightLimit80 = 816;
+    int lightLimit60 = 612;
+    int lightLimit40 = 408;
+    int lightLimit20 = 204;
     int shutterClosed = 1023;
-    int shutterHalf = 256;
+    int shutterHalf = 512;
     int shutterOpen = 0;
     int lightOn = 1023;
-    int lightHalf = 256;
+    int lightHalf = 512;
     int lightOff = 0;
     
     //Werte fuer Ventilator und Heizung initialisieren
     int temperature = 0;
-    int tempLimitMax = 30;
-    int tempLimitHigh = 20;
-    int tempLimitLow = 10;
-    int tempLimitMin = 0;
+    int tempLimit30 = 30;
+    int tempLimit20 = 20;
+    int tempLimit10 = 10;
+    int tempLimit0 = 0;
     int heatingFull = 1023;
     int heatingHalf = 512;
     int heatingOff = 0;
@@ -93,19 +93,19 @@ int main() {
         status = status + lightIntensity + "!";
         //Abhaengig der Lichtstaerke Deckenlamellen und Licht steuern
         //Je nach Zustand Status string aktualisieren
-        if(lightIntensity > lightLimitMax){
+        if(lightIntensity > lightLimit80){
             shutter(shutterClosed);
             light(lightOff);
             status = status + "100%!0%!";
-        } else if(lightIntensity <= lightLimitMax && lightIntensity > lightLimitHigh){
+        } else if(lightIntensity <= lightLimit80 && lightIntensity > lightLimit60){
             shutter(shutterHalf);
             light(lightOff);
             status = status + "50%!0%!";
-        } else if(lightIntensity < lightLimitLow && lightIntensity >= lightLimitMin){
+        } else if(lightIntensity < lightLimit40 && lightIntensity >= lightLimit20){
             shutter(shutterOpen);
             light(lightHalf);
             status = status + "0%!50%!";
-        } else if(lightIntensity < lightLimitMin){
+        } else if(lightIntensity < lightLimit20){
             shutter(shutterOpen);
             light(lightOn);
             status = status + "0%!100%!";
@@ -120,19 +120,19 @@ int main() {
         status = status + temperature + "C!";
         //Abhaengig der Temperatur Ventilator und Heizung steuern
         //Je nach Zustand Status string aktualisieren
-        if(temperature > tempLimitMax){
+        if(temperature > tempLimit30){
             ventilator(ventilatorFull);
             heating(heatingOff);
             status = status + "100%!0%!";
-        } else if(temperature <= tempLimitMax && temperature > tempLimitHigh){
+        } else if(temperature <= tempLimit30 && temperature > tempLimit20){
             ventilator(ventilatorHalf);
             heating(heatingOff);
             status = status + "50%!0%!";
-        } else if(temperature < tempLimitLow && temperature >= tempLimitMin){
+        } else if(temperature < tempLimit10 && temperature >= tempLimit0){
             ventilator(ventilatorOff);
             heating(heatingHalf);
             status = status + "0%!50%!";
-        } else if(temperature < tempLimitMin){
+        } else if(temperature < tempLimit0){
             ventilator(ventilatorOff);
             heating(heatingFull);
             status = status + "0%!100%!";

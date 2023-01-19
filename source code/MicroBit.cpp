@@ -59,6 +59,7 @@ int main() {
     
     //Werte fuer Ventilator und Heizung initialisieren
     int temperature = 0;
+    int temperatureOffset = 2;
     int tempLimit30 = 30;
     int tempLimit20 = 20;
     int tempLimit10 = 10;
@@ -116,7 +117,7 @@ int main() {
         }
 
         //Temperatur messen und Status string aktualisieren
-        temperature = uBit.thermometer.getTemperature();
+        temperature = uBit.thermometer.getTemperature() - temperatureOffset;
         status = status + temperature + "C!";
         //Abhaengig der Temperatur Ventilator und Heizung steuern
         //Je nach Zustand Status string aktualisieren

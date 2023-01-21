@@ -8,7 +8,7 @@ Es gibt ein Programm für den MicroBit und ein PC Programm.
 
 ## Anleitung MicroBit
 ### Allgemeines
-Das Programm `MicroBit.hex` kann direkt heruntergeladen und auf den MicroBit übertragen werden.
+Das Programm `MICROBIT.hex` kann direkt heruntergeladen und auf den MicroBit übertragen werden.
 Der MicroBit arbeitet unabhängig vom PC Programm.
 Die erforderliche Hardware ist im Wiki hinterlegt.
 
